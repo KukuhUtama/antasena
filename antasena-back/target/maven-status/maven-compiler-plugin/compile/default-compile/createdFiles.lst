@@ -1,0 +1,6 @@
+com\mandiri\antasena\service\UserService.class
+com\mandiri\antasena\repository\impl\GenericRepositoryImpl.class
+com\mandiri\antasena\repository\UserRepository.class
+com\mandiri\antasena\repository\GenericRepository.class
+com\mandiri\antasena\service\impl\UserServiceImpl.class
+com\mandiri\antasena\repository\impl\UserRepositoryImpl.class

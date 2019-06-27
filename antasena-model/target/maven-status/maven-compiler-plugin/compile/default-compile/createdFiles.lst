@@ -1,0 +1,4 @@
+com\mandiri\antasena\domain\User.class
+com\mandiri\antasena\entity\UserEntity.class
+com\mandiri\antasena\domain\CommonDomain.class
+com\mandiri\antasena\entity\CommonEntity.class
