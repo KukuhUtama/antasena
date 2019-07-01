@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -14,8 +15,9 @@ import com.mandiri.antasena.domain.User;
 import com.mandiri.antasena.service.UserService;
 
 @Controller
-public class HomeController {
-
+public class HomeController extends BaseController {
+	private static final Logger logger = Logger.getLogger(HomeController.class);
+	
 	@Autowired
 	@Qualifier("userService")
 	private UserService userService;
@@ -24,11 +26,15 @@ public class HomeController {
 	
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
-		user = new User();
-		user.setUsername("kukuh");
-		user.setEmail("kukuh2utama");
-		userService.save(user);
+	
 		return new ModelAndView("page.index");
+	}
+	
+
+	@RequestMapping(value="/user/user-detail.html")
+	public ModelAndView Admin(HttpServletResponse response) throws IOException{
+
+		return new ModelAndView("page.user.detail");
 	}
 
 }
