@@ -3,7 +3,6 @@ package com.mandiri.antasena.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -15,7 +14,6 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 @Configuration
 @ComponentScan(basePackages = "com.mandiri.antasena")
 @EnableWebMvc
-@Order(2)
 public class MvcConfiguration implements WebMvcConfigurer {
 
 	@Override
