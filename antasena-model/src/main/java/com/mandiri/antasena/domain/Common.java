@@ -3,7 +3,7 @@ package com.mandiri.antasena.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-public class CommonDomain implements Serializable {
+public class Common implements Serializable {
 
 	private static final long serialVersionUID = 8785884467537475341L;
 	private Date createdDate;

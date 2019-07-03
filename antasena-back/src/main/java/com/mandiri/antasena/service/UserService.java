@@ -5,7 +5,8 @@ import java.util.List;
 import com.mandiri.antasena.domain.User;
 
 public interface UserService {
-	    void delete(User deleted);
-	    List<User> findAll();
-	    User save(User persisted);
+	    public void delete(User user);
+	    public List<User> findAll();
+	    public User save(User user);
+	    public User findByUserName(String username);
 }

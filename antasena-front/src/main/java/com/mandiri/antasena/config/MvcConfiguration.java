@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
-@ComponentScan(basePackages = "com.mandiri.antasena")
+@ComponentScan(basePackages ="com.mandiri.antasena")
 @EnableWebMvc
 public class MvcConfiguration implements WebMvcConfigurer {
 

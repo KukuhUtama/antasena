@@ -20,13 +20,12 @@ public class UserServiceImpl implements UserService {
 	private UserRepository userRepository;
 
 	private UserEntity userEntity;
-	private User user;
 	private List<User> listUser;
 
 	@Override
-	public void delete(User deleted) {
+	public void delete(User user) {
 		userEntity = new UserEntity();
-		userEntity.fromDomain(deleted, true);
+		userEntity.fromDomain(user, true);
 		userRepository.delete(userEntity);
 	}
 
@@ -40,12 +39,19 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User save(User persisted) {
-		user = null;
+	public User save(User user) {
 		userEntity = new UserEntity();
-		userEntity.fromDomain(persisted, true);
+		userEntity.fromDomain(user, true);
 		userEntity = userRepository.save(userEntity);
 		return user = userEntity.toDomain(User.class, true);
+	}
+
+	@Override
+	public User findByUserName(String username) {
+        User user = null;
+        userEntity = new UserEntity();
+        userEntity = userRepository.findByUserName(username);
+        return user = userEntity.toDomain(User.class, true);
 	}
 
 }
