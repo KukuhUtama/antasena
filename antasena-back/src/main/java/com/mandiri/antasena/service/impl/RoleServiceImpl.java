@@ -3,6 +3,7 @@ package com.mandiri.antasena.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,8 @@ import com.mandiri.antasena.service.RoleService;
 
 @Service("roleService")
 public class RoleServiceImpl implements RoleService{
-
+	private static final Logger logger = Logger.getLogger(RoleServiceImpl.class);
+	
 	@Autowired
 	@Qualifier("roleRepository")
 	private RoleRepository roleRepository;

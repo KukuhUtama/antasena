@@ -70,7 +70,6 @@ public class CommonEntity<T> {
 	}
 
 	public void fromDomain(T domain, boolean includeChild) {
-
 		if (domain != null)
 			BeanUtils.copyProperties(domain, this, ignoreList);
 	}
@@ -81,14 +80,12 @@ public class CommonEntity<T> {
 
 	public T toDomain(Class<T> clazz, boolean includeChild) {
 		T result = null;
-
 		try {
 			result = clazz.newInstance();
 			BeanUtils.copyProperties(this, result, ignoreList);
 		} catch (Exception e) {
 			logger.debug("error converting to domain :", e);
 		}
-
 		return result;
 	}
 
