@@ -13,13 +13,12 @@ import com.mandiri.antasena.service.UserRoleService;
 @Service("userRoleService")
 public class UserRoleServiceImpl implements UserRoleService{
 	private static final Logger logger = Logger.getLogger(UserRoleServiceImpl.class);
-	
+
+	private UserRoleEntity userRoleEntity;
+
 	@Autowired
 	@Qualifier("userRoleRepository")
 	private UserRoleRepository userRoleRepository;
-	
-	private UserRoleEntity userRoleEntity;
-
 	
 	@Override
 	public UserRole save(UserRole userRole) {

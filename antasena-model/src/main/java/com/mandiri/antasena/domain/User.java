@@ -1,6 +1,7 @@
 package com.mandiri.antasena.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class User extends Common implements Serializable{
 
@@ -9,6 +10,7 @@ public class User extends Common implements Serializable{
 	private Long id;
 	private String username;
 	private String email;
+	private List<Role> listRole;
 
 	public Long getId() {
 		return id;
@@ -34,4 +36,11 @@ public class User extends Common implements Serializable{
 		this.email = email;
 	}
 
+	public List<Role> getListRole() {
+		return listRole;
+	}
+
+	public void setListRole(List<Role> listRole) {
+		this.listRole = listRole;
+	}
 }

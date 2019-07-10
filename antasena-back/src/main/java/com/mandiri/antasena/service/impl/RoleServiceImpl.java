@@ -49,4 +49,14 @@ public class RoleServiceImpl implements RoleService{
 		roleEntity = roleRepository.save(roleEntity);
 		return roleEntity.toDomain(Role.class); 
 	}
+
+	@Override
+	public List<Role> findByUserId(Long id) {
+		listRole = new ArrayList<Role>();
+		for(RoleEntity el : roleRepository.findByUserId(id)) {
+			role = el.toDomain(Role.class, true);
+			listRole.add(role);
+		}
+		return listRole;
+	}
 }
