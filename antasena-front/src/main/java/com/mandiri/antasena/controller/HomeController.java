@@ -41,25 +41,6 @@ public class HomeController extends BaseController {
 	
 	@RequestMapping(value="/")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
-	    user = new User();
-	    user.setCreatedBy("Admin");
-	    user.setCreatedDate(new Date());
-	    user.setEmail("kukuh2utama@gmail");
-	    user.setUsername("kukuh.utama");
-	    user = userService.save(user);
-	    
-	    role = new Role();
-	    role.setCreatedBy("Admin");
-	    role.setCreatedDate(new Date());
-	    role.setRoleName("ADMIN");
-	    role = roleService.save(role);
-	    
-	    userRole = new UserRole();
-	    userRole.setRole(role);
-	    userRole.setUser(user);
-	    userRole.setCreatedBy("Admin");
-	    userRole.setCreatedDate(new Date());
-	    userRoleService.save(userRole);
 		return new ModelAndView("page.index");
 	}
 	

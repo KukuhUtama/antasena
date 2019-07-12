@@ -10,6 +10,7 @@ public class User extends Common implements Serializable{
 	private Long id;
 	private String username;
 	private String email;
+	private String password;
 	private List<Role> listRole;
 
 	public Long getId() {
@@ -34,6 +35,14 @@ public class User extends Common implements Serializable{
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+   
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public List<Role> getListRole() {

@@ -19,6 +19,7 @@ public class UserEntity extends CommonEntity<User> implements Serializable {
 	private Long id;
 	private String username;
 	private String email;
+	private String password;
 
 	@Id
 	@Column(name = "id")
@@ -49,4 +50,12 @@ public class UserEntity extends CommonEntity<User> implements Serializable {
 		this.email = email;
 	}
 
+	@Column(name = "password",length = 150)
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }
