@@ -12,23 +12,24 @@ import javax.persistence.Table;
 import com.mandiri.antasena.domain.User;
 
 @Entity
-@Table(name = "antasena_user")
+@Table(name = "t_antasena_user")
 public class UserEntity extends CommonEntity<User> implements Serializable {
 	private static final long serialVersionUID = 1843907838186948896L;
 
-	private Long userNo;
+	private Long id;
 	private String username;
 	private String email;
+	private String password;
 
 	@Id
-	@Column(name = "user_no")
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long getUserNo() {
-		return userNo;
+	public Long getId() {
+		return id;
 	}
 
-	public void setUserNo(Long userNo) {
-		this.userNo = userNo;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
     @Column(name = "username",length = 150)
@@ -49,4 +50,12 @@ public class UserEntity extends CommonEntity<User> implements Serializable {
 		this.email = email;
 	}
 
+	@Column(name = "password",length = 150)
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }
